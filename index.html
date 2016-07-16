@@ -1,0 +1,50 @@
+<html ng-app="lifeApp">
+	<head>
+		<title>Time is Precious</title>
+		<link rel="stylesheet" href="reset.css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="animate.css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body ng-controller="mainCtrl">
+		<main>
+			<section class="result-box"><h2>You have about</h2>
+				<h1>{{life}}</h1>
+				<h2>left to live.</h2>
+				<section class="enjoy">
+					<h2>Enjoy it.</h2>
+				</section>
+			</section>
+		</main>
+		<header ng-hide="result">
+		<section class="choose-section">
+			<h1>Choose Your Birthday</h1>
+			<form>
+					<select ng-model="birthDay" required>
+					<option value="" disable selected>Day</option>
+					<option ng-repeat="value in days">{{days[value -1]}}</option>
+				</select>
+				<select ng-model="birthMonth"required>
+					<option value="" disabled selected>Month</option>
+					<option ng-repeat="month in months">{{month}}</option>
+				</select>
+				<select ng-model="birthYear" required>
+					<option value="" disabled selected>Year</option>
+					<option ng-repeat="year in years">{{year}}</option>
+				</select>
+				<br>
+				<select ng-model="gender" required>
+					<option value="" disabled selected>Gender</option>
+					<option value="female">Female</option>
+					<option value="male">Male</option>
+				</select>
+				<button type="button" ng-click="sendBirthday(days, months, years)">Go</button>
+			</form>
+		</section>
+	</header>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+	</body>
+</html>

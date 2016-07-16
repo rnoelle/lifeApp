@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+header {
+  background-image: url('https://images.unsplash.com/photo-1421091242698-34f6ad7fc088?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=cb4a6efe73dc2465a8c57049829b2824');
+  background-size: cover;
+  color: #fefefe;
+  display: flex;
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 6em;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+.choose-section {
+  margin: auto;
+}
+.choose-section select, button {
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: .85em;
+  background: rgba(250, 250, 250, 0.5);
+  color: #666;
+  text-transform: uppercase;
+}
+
+.choose-section button:hover, select:hover {
+  background: rgba(250, 250, 250, 0.9);
+  /*border: solid 2px #666;*/
+}
+
+main {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1429080695038-cdf6ae5dbc13?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=edf3f6bb9f9aa40d569ba627460734ec');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: #666;
+  text-align: center;
+  z-index: 1;
+}
+
+.result-box {
+  margin: auto;
+}
+
+main h2 {
+  font-size: 3em;
+  width: 100%;
+}
+main h1 {
+  font-size: 5em;
+}
+
+.show-animate {
+  transition: all .4s;
+}
+.enjoy {
+  width: 100%;
+  margin-top: 30px;
+  font-weight: bolder;
+}
+.ng-hide-add         { animation:0.5s slideOutDown ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s fadeInUp ease; }
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* flip in */
